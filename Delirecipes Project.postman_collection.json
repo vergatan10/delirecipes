@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "e482025d-ae72-47d5-a92c-cf7f025e9f6b",
+		"name": "Delirecipes Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20980702"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/category/bakery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/category/bakery"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/recipes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/recipe/burger-tebal-makin-hot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/recipe/burger-tebal-makin-hot"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/recipes/search?query=burger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/recipes/search?query=burger",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipes",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "burger"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
