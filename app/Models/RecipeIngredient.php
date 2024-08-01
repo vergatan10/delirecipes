@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class RecipeIngredient extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    // junction
+    protected $fillable = [
+        'ingredient_id',
+        'recipe_id',
+    ];
+
+    // RecipeIngredient dimiliki 1 Ingredient (belongsTo:singular)
+    public function ingredient(): BelongsTo
+    {
+        return $this->belongsTo(Ingredient::class);
+    }
+
+    // RecipeIngredient dimiliki 1 Recipe (belongsTo:singular)
+    public function recipe(): BelongsTo
+    {
+        return $this->belongsTo(Recipe::class);
+    }
+}
