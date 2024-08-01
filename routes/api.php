@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\Category;
+use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\RecipeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -8,5 +9,8 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/category/{category:slug}', [Category::class, 'show']);
-Route::apiResource('/categories', Category::class);
+Route::get('/category/{category:slug}', [CategoryController::class, 'show']);
+Route::apiResource('/categories', CategoryController::class);
+
+Route::get('/recipe/{recipes:slug}', [RecipeController::class, 'show']);
+Route::apiResource('/recipes', RecipeController::class);
